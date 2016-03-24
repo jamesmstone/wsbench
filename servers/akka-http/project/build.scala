@@ -21,7 +21,6 @@ object Build extends Build {
     	"com.typesafe.akka" %% "akka-http-core" % "2.4.2"
     ),
     mainClass in (Compile, run) := Some(""),
-    fork in run := true,
     javaOptions in run ++= Seq(
       "-server",
       "-Xms512m",
