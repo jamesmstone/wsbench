@@ -5,6 +5,7 @@ RUN apt-get upgrade -y
 
 # Install tcpkali
 RUN apt-get install -y git
+RUN ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 RUN git clone git@github.com:machinezone/tcpkali.git
 RUN cd tcpkali
 RUN apt-get install -y autoconf
