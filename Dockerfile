@@ -14,7 +14,7 @@ RUN apt-get install -y git \
 #RUN ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 
 # Install tcpkali
-RUN git clone git@github.com:machinezone/tcpkali.git
+RUN git clone https://github.com/machinezone/tcpkali.git
 
 WORKDIR "/tcpkali"
 RUN test -f configure || autoreconf -iv 
