@@ -1,15 +1,16 @@
 # wsbench
-web server/socket benchmark
 
-# Prerequites
+Web server/socket benchmark tool
 
-## Docker
+## Prerequites
 
-### Ubuntu
+### Docker
+
+#### Linux
 
 `curl -fsSL https://get.docker.com/ | sh`
 
-###  OS X
+#### OS X
 
 1. `brew cask install virtualbox`
 2. `brew install docker`
@@ -18,7 +19,6 @@ web server/socket benchmark
 5. `docker-machine env default`
 6. `eval $(docker-machine env default)`
 
-# Run
+## Run
 
-`docker run -d s1rc0/wplbedev`
-
+`docker run -d andreyne/wsbench`
