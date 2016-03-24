@@ -17,8 +17,6 @@ RUN apt-get install -y git \
 RUN git clone https://github.com/machinezone/tcpkali.git
 
 WORKDIR "/tcpkali"
-RUN test -f configure || autoreconf -iv 
-test -f configure || autoreconf -iv
 RUN test -f configure || autoreconf -iv
 RUN ./configure
 RUN make
