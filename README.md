@@ -21,4 +21,4 @@ Web server/socket benchmark tool
 
 ## Run
 
-`docker run -d andreyne/wsbench`
+`docker run -d wsbench/wsbench`
