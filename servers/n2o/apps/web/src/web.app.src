@@ -1,0 +1,9 @@
+{application, web,
+ [
+  {description, "N2O Web Application"},
+  {vsn, "2.9"},
+  {registered, []},
+  {applications, [kernel, stdlib, n2o, kvs, inets]},
+  {mod, { web, []}},
+  {env, []}
+ ]}.
