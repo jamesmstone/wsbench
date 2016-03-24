@@ -20,7 +20,7 @@ object Build extends Build {
     libraryDependencies ++= Seq(
     	"com.typesafe.akka" %% "akka-http-core" % "2.4.2"
     ),
-    mainClass in (Compile, run) := Some(""),
+    mainClass in (Compile, run) := Some("wsbench.Start"),
     javaOptions in run ++= Seq(
       "-server",
       "-Xms512m",
