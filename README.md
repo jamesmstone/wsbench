@@ -2,7 +2,7 @@
 
 Web server/socket benchmark tool
 
-## Prerequites
+## Prerequisites
 
 ### Docker
 
