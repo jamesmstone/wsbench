@@ -8,4 +8,4 @@ Docker container with Java8+Erlang+Postgres stack based on Centos7
 
 ## Usage
 
-`docker run -d s1rc0/wplbedev`
+`docker run -d wsbench/wsbench`
