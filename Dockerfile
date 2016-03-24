@@ -17,7 +17,7 @@ RUN apt-get install -y git \
                        flex \
                        g++ \
                        ncurses-dev
-RUN git clone git@github.com:machinezone/tcpkali.git
+RUN git clone https://github.com/machinezone/tcpkali.git
 
 WORKDIR "/tcpkali"
 RUN test -f configure || autoreconf -iv
