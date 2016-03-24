@@ -12,8 +12,8 @@ RUN apt-get install -y git \
                         g++ \
                         ncurses-dev
 
-RUN touch ~/.ssh/known_hosts
-RUN ssh-keyscan -H github.com >> ~/.ssh/known_hosts
+#RUN touch ~/.ssh/known_hosts
+#RUN ssh-keyscan -H github.com >> ~/.ssh/known_hosts
 RUN git clone git@github.com:machinezone/tcpkali.git
 RUN cd tcpkali
 RUN test -f configure || autoreconf -iv
