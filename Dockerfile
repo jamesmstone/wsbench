@@ -1,21 +1,24 @@
-FROM ubuntu:16.04
+FROM	ubuntu:latest
 
-RUN apt-get update -y && apt-get upgrade -y
+RUN	apt-get update -y \
+	&& apt-get install -y \
+	git \
+	make \
+	autoconf \
+	automake \
+	libtool \
+	bison \
+	flex \
+	g++ \
+	ncurses-dev \
+	&& git clone https://github.com/machinezone/tcpkali.git \
+	&& cd tcpkali \
+	&& test -f configure || autoreconf -iv \
+	&& ./configure \
+	&& make \
+	&& make install \
+	&& rm -rf /tcpkali \
+	&& apt-get remove -y git make autoconf automake ncurses-dev \
+	&& apt-get autoremove -y
 
-# tcpkali
-RUN apt-get install -y git \
-			make \
-			autoconf \
-			automake \
-			libtool \
-			bison \
-			flex \
-			g++ \
-			ncurses-dev
-
-RUN git clone https://github.com/machinezone/tcpkali.git
-WORKDIR "/tcpkali"
-RUN test -f configure || autoreconf -iv
-RUN ./configure
-RUN make
-RUN make install
+ENTRYPOINT	["tcpkali"]
